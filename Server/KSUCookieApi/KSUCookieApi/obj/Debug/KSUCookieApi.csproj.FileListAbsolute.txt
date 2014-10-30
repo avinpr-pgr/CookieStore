@@ -1,0 +1,14 @@
+C:\Git\CookieStore\KSUCookieApi\KSUCookieApi\bin\KSUCookieApi.dll.config
+C:\Git\CookieStore\KSUCookieApi\KSUCookieApi\bin\KSUCookieApi.dll
+C:\Git\CookieStore\KSUCookieApi\KSUCookieApi\bin\KSUCookieApi.pdb
+C:\Git\CookieStore\KSUCookieApi\KSUCookieApi\bin\Newtonsoft.Json.dll
+C:\Git\CookieStore\KSUCookieApi\KSUCookieApi\bin\System.Net.Http.Formatting.dll
+C:\Git\CookieStore\KSUCookieApi\KSUCookieApi\bin\System.Web.Http.dll
+C:\Git\CookieStore\KSUCookieApi\KSUCookieApi\bin\System.Web.Http.WebHost.dll
+C:\Git\CookieStore\KSUCookieApi\KSUCookieApi\bin\Newtonsoft.Json.xml
+C:\Git\CookieStore\KSUCookieApi\KSUCookieApi\bin\System.Net.Http.Formatting.xml
+C:\Git\CookieStore\KSUCookieApi\KSUCookieApi\bin\System.Web.Http.xml
+C:\Git\CookieStore\KSUCookieApi\KSUCookieApi\bin\System.Web.Http.WebHost.xml
+C:\Git\CookieStore\KSUCookieApi\KSUCookieApi\obj\Debug\KSUCookieApi.csprojResolveAssemblyReference.cache
+C:\Git\CookieStore\KSUCookieApi\KSUCookieApi\obj\Debug\KSUCookieApi.dll
+C:\Git\CookieStore\KSUCookieApi\KSUCookieApi\obj\Debug\KSUCookieApi.pdb
