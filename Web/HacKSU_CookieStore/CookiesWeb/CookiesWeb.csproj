@@ -206,6 +206,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="apps\cookieStore\app.js" />
+    <Content Include="apps\cookieStore\templates\products.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -1070,7 +1071,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49295</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49295/</IISUrl>
+          <IISUrl>http://localhost:8080/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

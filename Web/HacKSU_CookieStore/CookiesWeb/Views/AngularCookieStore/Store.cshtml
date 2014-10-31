@@ -1,2 +1,42 @@
-﻿
+﻿<div ng-app="cookieStoreApp" ng-controller="cookieStoreCtrl">
+    <div class="col-md-2 col-md-offset-1 well-lg">
+        <div class="row">
+            <input type="button" value="Cookies" class="btn btn-lg btn-info well-lg">
+        </div>
+        <div class="row">
+            &nbsp;
+        </div>
+        <div class="row">
+            <input type="button" value="Milk" class="btn btn-lg btn-info well-lg">
+        </div>
+        <div class="row">
+            &nbsp;
+        </div>
+        <div class="row">
+            <input type="button" value="Order" class="btn btn-lg btn-info well-lg">
+        </div>
+    </div>
+    <div ui-view></div>
+</div>
+
+
+
+@section cookieStoreScripts {
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-ui-router.js"></script>
+    <script src="~/Scripts/toastr.js"></script>
+    <script>
+        var cookieStoreApp = angular.module('cookieStoreApp', []);
+        cookieStoreApp.config([
+            '$stateProvider',
+            '$urlRouterProvider',
+            function ($stateProvider, $urlRouterProvider) {
+                
+            }
+        ]);
+        cookieStoreApp.controller('cookieStoreCtrl', function ($scope) {
+
+        });
+    </script>
+}
 
