@@ -2,6 +2,7 @@ package com.hacksu.CommunicationLibrary;
 
 import java.util.ArrayList;
 
+// Ultimately these will be calling HttpComm functions
 public class Waffles
 {
     public static ArrayList<Product> AllProducts()
