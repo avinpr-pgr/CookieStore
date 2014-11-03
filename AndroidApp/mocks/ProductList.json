@@ -1,0 +1,34 @@
+﻿{
+  "Products": [
+    {
+      "Category": "Cookie",
+      "Items": [
+        {
+          "id": 1,
+          "description": "Peanut butter",
+          "price": 15
+        },
+        {
+          "id": 2,
+          "description": "Bacon",
+          "price": 5
+        }
+      ]
+    },
+    {
+      "Category": "Milk",
+      "Items": [
+        {
+          "id": 3,
+          "description": "Chocolate milk",
+          "price": 15
+        },
+        {
+          "id": 4,
+          "description": "Organic",
+          "price": 15
+        }
+      ]
+    }
+  ]
+}
