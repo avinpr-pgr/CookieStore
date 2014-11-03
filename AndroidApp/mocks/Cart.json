@@ -1,0 +1,15 @@
+﻿{
+  "TotalPrice": 150,
+  "Items": [
+    {
+      "id": 1,
+      "description": "Peanut butter",
+      "quantity": 15
+    },
+    {
+      "id": 2,
+      "description": "Bacon",
+      "quantity": 5
+    }
+  ]
+}
