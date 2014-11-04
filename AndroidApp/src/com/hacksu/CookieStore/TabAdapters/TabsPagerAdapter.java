@@ -17,13 +17,10 @@ public class TabsPagerAdapter extends FragmentPagerAdapter
 
         switch (index) {
             case 0:
-                // Top Rated fragment activity
                 return new HomeFragment();
             case 1:
-                // Games fragment activity
                 return new CartFragment();
             case 2:
-                // Movies fragment activity
                 return new AboutFragment();
         }
 
@@ -32,7 +29,9 @@ public class TabsPagerAdapter extends FragmentPagerAdapter
 
     @Override
     public int getCount() {
-        // get item count - equal to number of tabs
+        // shalt thou count to three, no more, no less. Three shall be the number thou shalt count,
+        // and the number of the counting shall be three. Four shalt thou not count, neither count thou two,
+        // excepting that thou then proceed to three. Five is right out.
         return 3;
     }
 
