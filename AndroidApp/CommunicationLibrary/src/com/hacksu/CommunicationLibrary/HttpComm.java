@@ -1,21 +1,20 @@
 package com.hacksu.CommunicationLibrary;
 
 import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.message.BasicHeader;
+import org.apache.http.protocol.HTTP;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class HttpComm
 {
@@ -40,7 +39,7 @@ public class HttpComm
         return response;
     }
 
-    public static HttpResponse makePostRequest(String uri)
+    public static HttpResponse makePostRequest(String uri, JSONObject data)
     {
         HttpResponse response = null;
         try
@@ -48,11 +47,9 @@ public class HttpComm
             HttpClient httpClient = new DefaultHttpClient();
             HttpPost httpPost = new HttpPost(uri);
 
-            List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(2);
-            nameValuePair.add(new BasicNameValuePair("username", "test_user"));
-            nameValuePair.add(new BasicNameValuePair("password", "123456789"));
-
-            httpPost.setEntity(new UrlEncodedFormEntity(nameValuePair));
+            StringEntity stringEntity = new StringEntity(data.toString());
+            stringEntity.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+            httpPost.setEntity(stringEntity);
 
             response = httpClient.execute(httpPost);
         }
@@ -71,7 +68,7 @@ public class HttpComm
         return response;
     }
 
-    public static HttpResponse makePutRequest(String uri)
+    public static HttpResponse makePutRequest(String uri, JSONObject data)
     {
         HttpResponse response = null;
         try
@@ -79,11 +76,9 @@ public class HttpComm
             HttpClient httpClient = new DefaultHttpClient();
             HttpPut httpPut = new HttpPut(uri);
 
-            List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(2);
-            nameValuePair.add(new BasicNameValuePair("username", "test_user"));
-            nameValuePair.add(new BasicNameValuePair("password", "123456789"));
-
-            httpPut.setEntity(new UrlEncodedFormEntity(nameValuePair));
+            StringEntity stringEntity = new StringEntity(data.toString());
+            stringEntity.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+            httpPut.setEntity(stringEntity);
 
             response = httpClient.execute(httpPut);
         }
