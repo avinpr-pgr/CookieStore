@@ -7,8 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import com.hacksu.CookieStore.TabAdapters.TabsPagerAdapter;
 
-public class MyActivity extends FragmentActivity implements
-        ActionBar.TabListener
+public class MainActivity extends FragmentActivity implements ActionBar.TabListener
 {
     private ViewPager viewPager;
     private TabsPagerAdapter mAdapter;
@@ -37,23 +36,7 @@ public class MyActivity extends FragmentActivity implements
                     .setTabListener(this));
         }
 
-        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-
-            @Override
-            public void onPageSelected(int position) {
-                // on changing the page
-                // make respected tab selected
-                actionBar.setSelectedNavigationItem(position);
-            }
-
-            @Override
-            public void onPageScrolled(int arg0, float arg1, int arg2) {
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int arg0) {
-            }
-        });
+        setupViewPagerListeners();
     }
 
     @Override
@@ -74,5 +57,24 @@ public class MyActivity extends FragmentActivity implements
 
     }
 
+    private void setupViewPagerListeners()
+    {
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
+            @Override
+            public void onPageSelected(int position) {
+                // on changing the page
+                // make respected tab selected
+                actionBar.setSelectedNavigationItem(position);
+            }
+
+            @Override
+            public void onPageScrolled(int arg0, float arg1, int arg2) {
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int arg0) {
+            }
+        });
+    }
 }
