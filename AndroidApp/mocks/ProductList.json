@@ -1,34 +1,9 @@
-﻿{
-  "Products": [
-    {
-      "Category": "Cookie",
-      "Items": [
-        {
-          "id": 1,
-          "description": "Peanut butter",
-          "price": 15
-        },
-        {
-          "id": 2,
-          "description": "Bacon",
-          "price": 5
-        }
-      ]
-    },
-    {
-      "Category": "Milk",
-      "Items": [
-        {
-          "id": 3,
-          "description": "Chocolate milk",
-          "price": 15
-        },
-        {
-          "id": 4,
-          "description": "Organic",
-          "price": 15
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "Category":0,
+    "Id":0, //Cookies
+    "Name":"Chocolate Chip",
+    "Description":"Warm, gooey Chocolate Chips!",
+    "Price":1.0
+  },
+  {"Category":0,"Id":1,"Name":"Peanut Butter","Description":"Caution--May Contain Peanut Products","Price":1.25},{"Category":0,"Id":2,"Name":"Sugar","Description":"WHEEE!!","Price":1.5},{"Category":0,"Id":3,"Name":"Oatmeal Raisin","Description":"It's Oatmeal.  It's Raisin.  It's both!","Price":2.25},{"Category":1,"Id":4,"Name":"Whole","Description":"Pours like a milkshake","Price":0.5},{"Category":1,"Id":5,"Name":"2%","Description":"Just Like Mom used to buy","Price":0.75},{"Category":1,"Id":6,"Name":"Skim","Description":"To help you watch your waistline","Price":0.55},{"Category":1,"Id":7,"Name":"Soy","Description":"Well... this is really soy juice but who cares?","Price":1.3}]
