@@ -20,7 +20,7 @@ namespace KSUCookieApi.Controllers
 
         // TODO: Create a DELETE call for a specific ID
 
-        //TODO: Update quantity
+        // TODO: Add/Update quantity
 
         // TODO: Private method to manage static context object
     }

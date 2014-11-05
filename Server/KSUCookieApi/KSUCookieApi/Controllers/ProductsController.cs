@@ -6,36 +6,33 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
-using System.Web.Mvc;
 
 namespace KSUCookieApi.Controllers
 {
     public class ProductsController : ApiController
     {
-        // TODO: Chris to explain how this works in MVC
-        //[ActionName("AllProducts"] 
-        public HttpResponseMessage Get()
+        [HttpGet]
+        public IEnumerable<ProductsModel> AllProducts()
         {
-            // localhost/products returns all products
-            // TODO: Products will return a JSON representation of all products
-            return Request.CreateResponse(HttpStatusCode.OK, StaticDataContext.ProductList);
+            return StaticDataContext.ProductList;
         }
 
-        //TODO: Get Method to get only cookies
-        //public ActionResult Cookies()
-        //{
-                // localhost/products/cookies returns a list of cookies
-        //}
-
-        //public ActionResult Milk()
-        //{
-        // localhost/products/milk returns a list of milk
-        //}
-
-        // TODO: Get method to retrieve product by unique ID.
-        public void Product(int id)
+        [HttpGet]
+        public IEnumerable<ProductsModel> Cookies()
         {
-            // localhost/products/id returns a product based on id passed in
+            return StaticDataContext.ProductList.Where(p => p.ProductCategory == Category.Cookie);
+        }
+
+        [HttpGet]
+        public IEnumerable<ProductsModel> Milk()
+        {
+            return StaticDataContext.ProductList.Where(p => p.ProductCategory == Category.Milk);
+        }
+
+        [HttpGet]
+        public ProductsModel Product(int id)
+        {
+            return StaticDataContext.ProductList.Where(p => p.Id == id).FirstOrDefault();
         }
     }
 }

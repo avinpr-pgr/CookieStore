@@ -5,33 +5,56 @@ using System.Web;
 
 namespace KSUCookieApi.Models
 {
-    public enum Category {Cookie,Milk};
+    public enum Category { Cookie, Milk };
 
-    public abstract class StaticDataContext
+    public class StaticDataContext
     {
-        public static List<Product> ProductList = new List<Product>
-        {
-            CreateProduct(0,1m,Category.Cookie,"Chocolate Chip", "Warm, gooey Chocolate Chips!"),
-            CreateProduct(0,1.25m,Category.Cookie,"Peanut Butter", "Caution--May Contain Peanut Products"),
-            CreateProduct(0,1.5m,Category.Cookie,"Sugar", "WHEEE!!"),
-            CreateProduct(0,2.25m,Category.Cookie,"Oatmeal Raisin", "It's Oatmeal.  It's Raisin.  It's both!"),
-            CreateProduct(0,.5m,Category.Milk,"Whole", "Pours like a milkshake"),
-            CreateProduct(0,.75m,Category.Milk,"2%", "Just Like Mom used to buy"),
-            CreateProduct(0,.55m,Category.Milk,"Skim", "To help you watch your waistline"),
-            CreateProduct(0,1.3m,Category.Milk,"Soy", "Well... this is really soy juice but who cares?"),
+        private static int idToUse = 0;
+        public static List<OrderModel> Order = new List<OrderModel>();
 
-        };
+        private static List<ProductsModel> _productList;
+        public static List<ProductsModel> ProductList 
+            { 
+                get 
+                {
+                    if (_productList == null)
+                        _productList = InitializeProductList();
+                    return _productList; 
+                } 
+            }
 
-        public static Product CreateProduct(int id, decimal price, Category cat, string name, string desc)
+        public static ProductsModel CreateProductEntry(decimal price, Category cat, string name, string desc)
         {
-            return new Product
+            return new ProductsModel
             {
-                Id = id,
+                Id = idToUse++,
                 Name = name,
                 Price = price,
-                Category = cat,
+                ProductCategory = cat,
                 Description = desc
             };
+        }
+
+        public static void AddNewProduct(ProductsModel Prod)
+        {
+            if (!ProductList.Exists(x => x.Name == Prod.Name))
+            {
+                ProductList.Add(Prod);
+            }
+        }
+
+        public static List<ProductsModel> InitializeProductList()
+        {
+            var productList = new List<ProductsModel>();
+            productList.Add(CreateProductEntry(1m, Category.Cookie, "Chocolate Chip", "Warm, gooey Chocolate Chips!"));
+            productList.Add(CreateProductEntry(1.25m, Category.Cookie, "Peanut Butter", "Caution--May Contain Peanut Products"));
+            productList.Add(CreateProductEntry(1.5m, Category.Cookie, "Sugar", "WHEEE!!"));
+            productList.Add(CreateProductEntry(2.25m, Category.Cookie, "Oatmeal Raisin", "It's Oatmeal.  It's Raisin.  It's both!"));
+            productList.Add(CreateProductEntry(.5m, Category.Milk, "Whole", "Pours like a milkshake"));
+            productList.Add(CreateProductEntry(.75m, Category.Milk, "2%", "Just Like Mom used to buy"));
+            productList.Add(CreateProductEntry(.55m, Category.Milk, "Skim", "To help you watch your waistline"));
+            productList.Add(CreateProductEntry(1.3m, Category.Milk, "Soy", "Well... this is really soy juice but who cares?"));
+            return productList;
         }
     }
 }
