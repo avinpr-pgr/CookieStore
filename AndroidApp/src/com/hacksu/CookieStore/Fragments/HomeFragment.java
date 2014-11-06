@@ -24,7 +24,6 @@ public class HomeFragment extends ListFragment
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.home_layout, container, false);
-        setupListAdapter();
         return rootView;
     }
 
@@ -32,18 +31,22 @@ public class HomeFragment extends ListFragment
     public void onViewCreated(View view, Bundle savedInstanceState)
     {
         listView = getListView();
+        setupListAdapter();
     }
 
     private void setupListAdapter()
     {
         List<String> viewableList = createViewableList(getData());
-        ListAdapter listAdapter = new ArrayAdapter<String>(getActivity(), R.id.productList, viewableList);
+        ListAdapter listAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, viewableList);
         listView.setAdapter(listAdapter);
     }
 
     private ArrayList<String> createViewableList(JSONObject data)
     {
         ArrayList<String> viewableList = new ArrayList<String>();
+        viewableList.add("test");
+        viewableList.add("test");
+        viewableList.add("test");
         return viewableList;
     }
 
