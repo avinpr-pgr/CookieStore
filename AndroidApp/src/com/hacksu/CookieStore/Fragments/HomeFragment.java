@@ -5,19 +5,46 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import com.hacksu.CookieStore.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HomeFragment extends ListFragment
 {
+    private ListView listView;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.home_layout, container, false);
-
+        setupListAdapter();
         return rootView;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState)
+    {
+        listView = getListView();
+    }
+
+    private void setupListAdapter()
+    {
+        List<String> viewableList = createViewableList(getData());
+        ListAdapter listAdapter = new ArrayAdapter<String>(getActivity(), R.id.productList, viewableList);
+        listView.setAdapter(listAdapter);
+    }
+
+    private ArrayList<String> createViewableList(JSONObject data)
+    {
+        ArrayList<String> viewableList = new ArrayList<String>();
+        return viewableList;
     }
 
     private JSONObject getData()
