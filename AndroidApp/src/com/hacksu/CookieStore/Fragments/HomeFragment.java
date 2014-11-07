@@ -5,9 +5,11 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import com.hacksu.CookieStore.FragmentHelper;
 import com.hacksu.CookieStore.R;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,6 +21,8 @@ public class HomeFragment extends ListFragment
 {
     private ListView listView;
     private HashMap<String, String> categories = new HashMap<String, String>();
+    private ArrayList<Map<String, String>> productList = new ArrayList<Map<String, String>>();
+    private HashMap<String, String> ids = new HashMap<String, String>();
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -33,6 +37,7 @@ public class HomeFragment extends ListFragment
     {
         listView = getListView();
         setupListAdapter();
+        setupListViewListeners();
     }
 
     private void initializeCategories()
@@ -49,6 +54,27 @@ public class HomeFragment extends ListFragment
         listView.setAdapter(listAdapter);
     }
 
+    private void setupListViewListeners()
+    {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
+                Map<String, String> map = productList.get(position);
+                Bundle bundle = new Bundle();
+                if (map.containsKey("NotAProduct")) return;
+                bundle.putString("id", map.get("Id"));
+                bundle.putString("name", map.get("Name"));
+                bundle.putString("description", map.get("Description"));
+
+                DetailsFragment fragment = new DetailsFragment();
+                fragment.setArguments(bundle);
+                FragmentHelper.showFragment("home", HomeFragment.this, "details", fragment, getFragmentManager());
+            }
+        });
+    }
+
     private ArrayList<String> createViewableList(JSONArray data)
     {
         ArrayList<String> viewableList = new ArrayList<String>();
@@ -60,9 +86,13 @@ public class HomeFragment extends ListFragment
             if (!addedCategories.contains(category))
             {
                 viewableList.add(categories.get(category));
+                HashMap<String, String> temp = new HashMap<String, String>();
+                temp.put("NotAProduct", categories.get(category));
+                productList.add(temp);
                 addedCategories.add(category);
             }
             viewableList.add(map.get("Name"));
+            productList.add(map);
         }
 
         return viewableList;
