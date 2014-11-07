@@ -1,15 +1,19 @@
 package com.hacksu.CookieStore.TabAdapters;
 
-import android.support.v4.app.*;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import com.hacksu.CookieStore.Fragments.AboutFragment;
 import com.hacksu.CookieStore.Fragments.CartFragment;
-import com.hacksu.CookieStore.Fragments.HomeFragment;
+import com.hacksu.CookieStore.Fragments.HomeRootFragment;
 
 public class TabsPagerAdapter extends FragmentPagerAdapter
 {
+    private FragmentManager fragmentManager;
 
     public TabsPagerAdapter(FragmentManager fm) {
         super(fm);
+        fragmentManager = fm;
     }
 
     @Override
@@ -17,7 +21,7 @@ public class TabsPagerAdapter extends FragmentPagerAdapter
 
         switch (index) {
             case 0:
-                return new HomeFragment();
+                return new HomeRootFragment();
             case 1:
                 return new CartFragment();
             case 2:

@@ -70,7 +70,7 @@ public class HomeFragment extends ListFragment
 
                 DetailsFragment fragment = new DetailsFragment();
                 fragment.setArguments(bundle);
-                FragmentHelper.showFragment("home", HomeFragment.this, "details", fragment, getFragmentManager());
+                FragmentHelper.showFragment(R.id.homeRoot, "home", HomeFragment.this, "details", fragment, getFragmentManager());
             }
         });
     }
