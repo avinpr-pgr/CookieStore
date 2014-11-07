@@ -2,9 +2,12 @@ package com.hacksu.CookieStore;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
+
 import com.hacksu.CookieStore.TabAdapters.TabsPagerAdapter;
 
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener
@@ -43,6 +46,11 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft)
     {
         viewPager.setCurrentItem(tab.getPosition());
+        if (tab.getPosition() == 1) {
+            LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(this);
+            Intent i = new Intent("CART_TAB_REFRESH");
+            lbm.sendBroadcast(i);
+        }
     }
 
     @Override
