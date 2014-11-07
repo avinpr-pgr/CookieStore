@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">CookieStore</string>
-    <string name="home_text">WOOO! HOME SCREEN!</string>
     <string name="cart_text">DAT CART SCREEN</string>
     <string name="about_text">OMAGERD! ABOUT SCREEN!</string>
+    <string name="home_products">Products</string>
+    <string name="product_details">Product Details</string>
 </resources>
