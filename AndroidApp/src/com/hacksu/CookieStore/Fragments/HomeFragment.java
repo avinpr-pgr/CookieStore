@@ -9,21 +9,22 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import com.hacksu.CookieStore.R;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class HomeFragment extends ListFragment
 {
     private ListView listView;
+    private HashMap<String, String> categories = new HashMap<String, String>();
 
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.home_layout, container, false);
+        initializeCategories();
         return rootView;
     }
 
@@ -34,28 +35,71 @@ public class HomeFragment extends ListFragment
         setupListAdapter();
     }
 
+    private void initializeCategories()
+    {
+        categories.put("0", "Cookies");
+        categories.put("1", "Milk");
+    }
+
     private void setupListAdapter()
     {
-        List<String> viewableList = createViewableList(getData());
+        JSONArray data = getData();
+        List<String> viewableList = createViewableList(data);
         ListAdapter listAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, viewableList);
         listView.setAdapter(listAdapter);
     }
 
-    private ArrayList<String> createViewableList(JSONObject data)
+    private ArrayList<String> createViewableList(JSONArray data)
     {
         ArrayList<String> viewableList = new ArrayList<String>();
-        viewableList.add("test");
-        viewableList.add("test");
-        viewableList.add("test");
+        ArrayList<Map<String, String>> processedData = JSONToArray(data);
+        ArrayList<String> addedCategories = new ArrayList<String>();
+        for (Map<String, String> map : processedData)
+        {
+            String category = map.get("Category");
+            if (!addedCategories.contains(category))
+            {
+                viewableList.add(categories.get(category));
+                addedCategories.add(category);
+            }
+            viewableList.add(map.get("Name"));
+        }
+
         return viewableList;
     }
 
-    private JSONObject getData()
+    private ArrayList<Map<String, String>> JSONToArray(JSONArray json)
     {
-        JSONObject data = null;
+        ArrayList<Map<String, String>> data = new  ArrayList<Map<String, String>>();
+        HashMap<String, String> map = new HashMap<String, String>();
         try
         {
-            data = new JSONObject(tempData);
+            for (int i = 0; i < json.length(); ++i)
+            {
+                JSONObject jsonObject = json.getJSONObject(i);
+                Iterator<?> keys = jsonObject.keys();
+
+                while( keys.hasNext() ){
+                    String key = (String)keys.next();
+                    map.put(key, jsonObject.get(key).toString());
+                }
+                data.add(map);
+                map = new HashMap<String, String>();
+            }
+        }
+        catch(JSONException e)
+        {
+            // do nothing
+        }
+        return data;
+    }
+
+    private JSONArray getData()
+    {
+        JSONArray data = null;
+        try
+        {
+            data = new JSONArray(tempData);
         }
         catch (JSONException e)
         {
@@ -64,5 +108,5 @@ public class HomeFragment extends ListFragment
         return data;
     }
 
-    private String tempData = "[\\r\\n{\\r\\n\\\"Category\\\":0,\\r\\n\\\"Id\\\":0, //Cookies\\r\\n\\\"Name\\\":\\\"Chocolate Chip\\\",\\r\\n\\\"Description\\\":\\\"Warm, gooey Chocolate Chips!\\\",\\r\\n\\\"Price\\\":1.0\\r\\n},\\r\\n{\\r\\n\\\"Category\\\":0,\\r\\n\\\"Id\\\":1,\\r\\n\\\"Name\\\":\\\"Peanut Butter\\\",\\r\\n\\\"Description\\\":\\\"Caution--May Contain Peanut Products\\\",\\r\\n\\\"Price\\\":1.25\\r\\n},\\r\\n{\\r\\n\\\"Category\\\":0,\\r\\n\\\"Id\\\":2,\\r\\n\\\"Name\\\":\\\"Sugar\\\",\\r\\n\\\"Description\\\":\\\"WHEEE!!\\\",\\r\\n\\\"Price\\\":1.5\\r\\n},\\r\\n{\\r\\n\\\"Category\\\":0,\\r\\n\\\"Id\\\":3,\\r\\n\\\"Name\\\":\\\"Oatmeal Raisin\\\",\\r\\n\\\"Description\\\":\\\"It's Oatmeal. It's Raisin. It's both!\\\",\\r\\n\\\"Price\\\":2.25\\r\\n},\\r\\n{\\r\\n\\\"Category\\\":1, // Milk\\r\\n\\\"Id\\\":4,\\r\\n\\\"Name\\\":\\\"Whole\\\",\\r\\n\\\"Description\\\":\\\"Pours like a milkshake\\\",\\r\\n\\\"Price\\\":0.5\\r\\n},\\r\\n{\\r\\n\\\"Category\\\":1,\\r\\n\\\"Id\\\":5,\\r\\n\\\"Name\\\":\\\"2%\\\",\\r\\n\\\"Description\\\":\\\"Just Like Mom used to buy\\\",\\r\\n\\\"Price\\\":0.75\\r\\n},\\r\\n{\\r\\n\\\"Category\\\":1,\\r\\n\\\"Id\\\":6,\\r\\n\\\"Name\\\":\\\"Skim\\\",\\r\\n\\\"Description\\\":\\\"To help you watch your waistline\\\",\\r\\n\\\"Price\\\":0.55\\r\\n},\\r\\n{\\r\\n\\\"Category\\\":1,\\r\\n\\\"Id\\\":7,\\r\\n\\\"Name\\\":\\\"Soy\\\",\\r\\n\\\"Description\\\":\\\"Well... this is really soy juice but who cares?\\\",\\r\\n\\\"Price\\\":1.3\\r\\n}\\r\\n]";
+    private String tempData = "[{\"Category\":0,\"Id\":0,\"Name\":\"Chocolate Chip\",\"Description\":\"Warm, gooey Chocolate Chips!\",\"Price\":1.0},{\"Category\":0,\"Id\":1,\"Name\":\"Peanut Butter\",\"Description\":\"Caution--May Contain Peanut Products\",\"Price\":1.25},{\"Category\":0,\"Id\":2,\"Name\":\"Sugar\",\"Description\":\"WHEEE!!\",\"Price\":1.5},{\"Category\":0,\"Id\":3,\"Name\":\"Oatmeal Raisin\",\"Description\":\"It's Oatmeal. It's Raisin. It's both!\",\"Price\":2.25},{\"Category\":1,\"Id\":4,\"Name\":\"Whole\",\"Description\":\"Pours like a milkshake\",\"Price\":0.5},{\"Category\":1,\"Id\":5,\"Name\":\"2%\",\"Description\":\"Just Like Mom used to buy\",\"Price\":0.75},{\"Category\":1,\"Id\":6,\"Name\":\"Skim\",\"Description\":\"To help you watch your waistline\",\"Price\":0.55},{\"Category\":1,\"Id\":7,\"Name\":\"Soy\",\"Description\":\"Well... this is really soy juice but who cares?\",\"Price\":1.3}]";
 }
