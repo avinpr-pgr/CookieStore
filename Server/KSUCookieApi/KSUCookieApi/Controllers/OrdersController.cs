@@ -4,7 +4,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web;
-using System.Web.Mvc;
 using KSUCookieApi.Models;
 using System.Web.Http;
 
@@ -18,9 +17,24 @@ namespace KSUCookieApi.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, order);
         }
 
-        // TODO: Create a DELETE call for a specific ID
+        // As this is not expressing returning data to the client, should this be a get?  Think about your HTTP verbs
+        //[HttpGet]
+        // If this isn't a Get, what should you return?  Remember, void is not an option.
+        //public IEnumerable<OrderList> Delete(int Id)
+        //{
+        //    // 
+        //    StaticDataContext.OrderList.RemoveAll(p => p.Id == Id);
+        //    return StaticDataContext.OrderList;
+        //}
 
         // TODO: Add/Update quantity
+        //[HttpGet]
+        //public IEnumerable<OrderModel> AddToCart(int Id, Category cat, int quantity)
+        //{
+        //    StaticDataContext.AddItemToCart(Id, cat, quantity);
+        //    return StaticDataContext.OrderList;
+        //}
+
 
         // TODO: Private method to manage static context object
     }

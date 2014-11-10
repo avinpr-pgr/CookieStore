@@ -7,8 +7,9 @@ namespace KSUCookieApi.Models
 {
     public class OrderModel
     {
-        // TODO: Flush out Order Model.  What data do we want to store?  How about a method on the model to generate the necessary data?
-        public string category { get; set; }
-        public int quantity { get; set; }
+        public int Id { get; set; }
+        public int Quantity { get; set; }
+        public Category ProductCategory { get; set; }
+        public string Name { get; set; }
     }
 }

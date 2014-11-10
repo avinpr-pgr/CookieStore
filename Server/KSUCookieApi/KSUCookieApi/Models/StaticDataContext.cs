@@ -9,25 +9,35 @@ namespace KSUCookieApi.Models
 
     public class StaticDataContext
     {
-        private static int idToUse = 0;
-        public static List<OrderModel> Order = new List<OrderModel>();
-
+        private static int productIdToUse = 0;
         private static List<ProductsModel> _productList;
         public static List<ProductsModel> ProductList 
-            { 
-                get 
-                {
-                    if (_productList == null)
-                        _productList = InitializeProductList();
-                    return _productList; 
-                } 
+        { 
+            get 
+            {
+                if (_productList == null)
+                    _productList = InitializeProductList();
+                return _productList; 
             }
+        }
+
+        private static int orderIdToUse = 0;
+        private static List<OrderModel> _orderList;
+        public static List<OrderModel> OrderList
+        {
+            get
+            {
+                if (_orderList == null)
+                    _orderList = new List<OrderModel>();
+                return _orderList;
+            }
+        }
 
         public static ProductsModel CreateProductEntry(decimal price, Category cat, string name, string desc)
         {
             return new ProductsModel
             {
-                Id = idToUse++,
+                Id = productIdToUse++,
                 Name = name,
                 Price = price,
                 ProductCategory = cat,
@@ -55,6 +65,26 @@ namespace KSUCookieApi.Models
             productList.Add(CreateProductEntry(.55m, Category.Milk, "Skim", "To help you watch your waistline"));
             productList.Add(CreateProductEntry(1.3m, Category.Milk, "Soy", "Well... this is really soy juice but who cares?"));
             return productList;
+        }
+
+        public OrderModel UpdateOrder(OrderModel order)
+        {
+            int index = _orderList.FindIndex(o => o.ProductCategory == order.ProductCategory && o.Name == order.Name);
+
+            if (index >= 0)
+            {
+                _orderList[index].Quantity++;
+            }
+            else
+            {
+                _orderList.Add(new OrderModel { Id = orderIdToUse++, ProductCategory = order.ProductCategory, Name = order.Name, Quantity = 1 });
+            }
+            return order;
+        }
+
+        public void Remove(int id)
+        {
+            _orderList.RemoveAll(o => o.Id == id);
         }
     }
 }
