@@ -23,7 +23,7 @@
     <div class="col-md-2 col-md-offset-1 well-lg">
         <div ng-repeat="button in buttonNames">
             <div class="row">
-                <a ng-href="#/{{ button | lowercase }}">
+                <a ng-href="#/store/{{ button | lowercase }}">
                 <input type="button" value="{{button}}" class="btn btn-lg btn-info well-lg" />
                 </a>
             </div>
@@ -42,29 +42,7 @@
     <script src="~/Scripts/angular-ui-router.js"></script>
     <script src="~/Scripts/angular-route.js"></script>
     <script src="~/Scripts/toastr.js"></script>
-<<<<<<< HEAD
-    <script src="~/apps/cookieStore/controllers/CookieStoreApp.js"></script>
-=======
-    <script>
-        var cookieStoreApp = angular.module('cookieStoreApp', ['ui.router']);
-        cookieStoreApp.config([
-            '$stateProvider',
-            '$urlRouterProvider',
-            //Add a parade somewhere
-            function ($stateProvider, $urlRouterProvider) {
-                $urlRouterProvider.otherwise('/Store');
-
-                $stateProvider.state('Store', {
-                    url:
-                    templateUrl:
-                    controller
-                });
-            }
-        ]);
-        cookieStoreApp.controller('cookieStoreCtrl', function ($scope) {
-
-        });
-    </script>
->>>>>>> origin/ChrisMorton
+    <script src="~/apps/cookieStore/app.js"></script>
+    <script src="~/Scripts/angular-resource.js"></script>
 }
 

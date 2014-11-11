@@ -207,8 +207,8 @@
   <ItemGroup>
     <Content Include="apps\cookieStore\app.js" />
     <Content Include="apps\cookieStore\controllers\CookieStoreApp.js" />
-    <Content Include="apps\cookieStore\templates\HelloStore.html" />
     <Content Include="apps\cookieStore\templates\products.html" />
+    <Content Include="apps\cookieStore\templates\store.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
