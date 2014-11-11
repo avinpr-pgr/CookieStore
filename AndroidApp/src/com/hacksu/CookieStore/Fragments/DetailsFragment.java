@@ -10,9 +10,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import com.hacksu.CommunicationLibrary.ApiCalls;
 import com.hacksu.CookieStore.FragmentHelper;
 import com.hacksu.CookieStore.R;
 import android.view.View.OnClickListener;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
@@ -20,10 +24,17 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.protocol.BasicHttpContext;
+import org.apache.http.protocol.HTTP;
 import org.apache.http.protocol.HttpContext;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONException;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 
 public class DetailsFragment extends Fragment
 {
@@ -97,7 +108,11 @@ public class DetailsFragment extends Fragment
                 showWarningMessage();
             else
             {
-                //sendDataToApi();
+                try {
+                    sendDataToApi();
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                }
                 returnToHomeScreen();
             }
         }
@@ -121,40 +136,23 @@ public class DetailsFragment extends Fragment
             FragmentHelper.replaceFragment(R.id.homeRoot,"home",fragment, getFragmentManager());
         }
 
-       /* private void sendDataToApi()
-        {
+       private void sendDataToApi() throws MalformedURLException {
+           URL url = new URL("http://cookieapidev1.cloudapp.net/ksuapi/api/orders/UpdateOrder");
             textBoxValue = Integer.parseInt(quantityText.getText().toString());
             jsonAddToCart = writeJSON(textBoxValue);
-            postToApi();
-        }*/
-       /* public JSONObject writeJSON(int textBoxValue) {
+           ApiCalls client = new ApiCalls(url.toString(), jsonAddToCart);
+           client.execute();
+        }
+        public JSONObject writeJSON(int textBoxValue) {
             JSONObject object = new JSONObject();
             try {
-                object.put("id", iD);
-                object.put("quantity", textBoxValue);
+                object.accumulate("ProductId", iD);
+                object.accumulate("Quantity", textBoxValue);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
             return object;
-        }*/
-        /*private void postToApi()
-        {
-
-            JSONArray jsonArrayAddToCart = new JSONArray();
-            jsonArrayAddToCart.put(jsonAddToCart);
-            String temp = jsonAddToCart.toString();
-
-            HttpClient client = new DefaultHttpClient();
-            HttpPost post = new HttpPost("url");
-            StringEntity stringType = new StringEntity(jsonAddToCart.toString());
-
-            se.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
-            post.setHeader("Accept", "application/json");
-            post.setHeader("Content-type", "application/json");
-            post.setEntity(se);
-            client.execute(post);
-
-        }*/
+        }
     };
 
 }
