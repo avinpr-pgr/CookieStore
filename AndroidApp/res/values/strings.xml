@@ -5,4 +5,9 @@
     <string name="about_text">OMAGERD! ABOUT SCREEN!</string>
     <string name="home_products">Products</string>
     <string name="product_details">Product Details</string>
+    <string name="quantity_Number">Quantity: </string>
+    <string name="add">Add</string>
+    <string name="nameLabel">Type: </string>
+    <string name="descriptionLabel">Description: </string>
+    <string name="ok_text">Ok</string>
 </resources>

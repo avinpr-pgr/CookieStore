@@ -1,15 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:layout_marginBottom="10dp">
     <TextView
             android:id="@+id/productDetailsLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:text="@string/product_details"
-            android:layout_centerHorizontal="true"/>
+            android:layout_gravity="center"/>
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:gravity="center">
+        <TextView
+                android:id="@+id/nameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/nameLabel"
+                android:gravity="center"/>
+        <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_below="@id/productDetailsLabel"
+                android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_margin="10dp">
+        <TextView
+                android:id="@+id/descriptionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/descriptionLabel"
+                android:gravity="center"/>
+        <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_below="@id/name"
+                android:gravity="center"/>
+    </LinearLayout>
 
-</RelativeLayout>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:gravity="center"
+                  android:layout_margin="10dp">
+        <TextView
+                android:id="@+id/quantityLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/quantity_Number"
+                android:gravity="center"/>
+        <EditText
+                android:id="@+id/quantityNumber"
+                android:layout_width="0.5in"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_alignRight="@id/quantityLabel"
+                android:gravity="center"/>
+        <Button
+                android:id="@+id/addButton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/add"
+                android:layout_below="@id/quantityLabel"
+                android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+

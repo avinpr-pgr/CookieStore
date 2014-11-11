@@ -13,9 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
-
-import com.hacksu.CookieStore.R;
 import com.hacksu.CookieStore.MockData.CartItems;
+import com.hacksu.CookieStore.R;
 
 public class CartFragment extends Fragment {
 
