@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>HacKSU Cookie Store Demo</title>
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/css")
+    <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+</head>
+<body ng-app="cookieStoreApp" ng-controller="cookieStoreController">
+    <div class="container filler">
+        <div class="row">
+            &nbsp;
+        </div>
+        <div class="jumbotron banner">
+            <h1>Welcome To The Cookie Store</h1>
+        </div>
+        @RenderBody()
+    </div>
+    @RenderSection("cookieStoreScripts", false)
+</body>
+</html>

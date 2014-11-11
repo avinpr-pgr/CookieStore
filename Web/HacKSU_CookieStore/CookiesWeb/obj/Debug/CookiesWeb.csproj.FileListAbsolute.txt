@@ -1,0 +1,252 @@
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\obj\Debug\CookiesWeb.csprojResolveAssemblyReference.cache
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\CookiesWeb.dll.config
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\CookiesWeb.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\CookiesWeb.pdb
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Antlr3.Runtime.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\EntityFramework.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\EntityFramework.SqlServer.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Google.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Web.Infrastructure.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Newtonsoft.Json.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Owin.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Net.Http.Formatting.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Helpers.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.Owin.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.WebHost.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Mvc.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Optimization.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Razor.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.Deployment.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.Razor.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\WebGrease.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Newtonsoft.Json.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Net.Http.Formatting.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Helpers.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.WebHost.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Mvc.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Optimization.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Razor.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.Deployment.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.Razor.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Antlr3.Runtime.pdb
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\EntityFramework.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\EntityFramework.SqlServer.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Google.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.Owin.xml
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\obj\Debug\CookiesWeb.dll
+c:\users\rwittib\documents\visual studio 2013\Projects\HacKSU_CookieStore\CookiesWeb\obj\Debug\CookiesWeb.pdb
+C:\HacKSU_CookieStore\CookiesWeb\bin\CookiesWeb.dll.config
+C:\HacKSU_CookieStore\CookiesWeb\bin\CookiesWeb.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\CookiesWeb.pdb
+C:\HacKSU_CookieStore\CookiesWeb\bin\Antlr3.Runtime.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\EntityFramework.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\EntityFramework.SqlServer.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.Core.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Cookies.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Facebook.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Google.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.OAuth.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Twitter.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\Newtonsoft.Json.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\Owin.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Net.Http.Formatting.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Helpers.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.Owin.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.WebHost.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Mvc.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Optimization.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Razor.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.Deployment.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.Razor.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\WebGrease.dll
+C:\HacKSU_CookieStore\CookiesWeb\bin\Newtonsoft.Json.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Net.Http.Formatting.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Helpers.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.WebHost.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Mvc.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Optimization.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Razor.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.Deployment.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.Razor.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\Antlr3.Runtime.pdb
+C:\HacKSU_CookieStore\CookiesWeb\bin\EntityFramework.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\EntityFramework.SqlServer.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.Core.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Facebook.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Cookies.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.OAuth.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Google.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Twitter.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.Owin.xml
+C:\HacKSU_CookieStore\CookiesWeb\obj\Debug\CookiesWeb.csprojResolveAssemblyReference.cache
+C:\HacKSU_CookieStore\CookiesWeb\obj\Debug\CookiesWeb.dll
+C:\HacKSU_CookieStore\CookiesWeb\obj\Debug\CookiesWeb.pdb
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\CookiesWeb.dll.config
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\CookiesWeb.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\CookiesWeb.pdb
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Antlr3.Runtime.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\EntityFramework.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\EntityFramework.SqlServer.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.Core.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Cookies.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Facebook.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Google.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.OAuth.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Twitter.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Web.Infrastructure.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Newtonsoft.Json.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Owin.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Net.Http.Formatting.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Helpers.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.Owin.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.WebHost.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Mvc.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Optimization.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Razor.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.Deployment.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.Razor.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\WebGrease.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Newtonsoft.Json.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Net.Http.Formatting.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Helpers.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.WebHost.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Mvc.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Optimization.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Razor.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.Deployment.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.Razor.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Antlr3.Runtime.pdb
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\EntityFramework.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\EntityFramework.SqlServer.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.Core.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Facebook.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Cookies.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.OAuth.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Google.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Twitter.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.Owin.xml
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\obj\Debug\CookiesWeb.csprojResolveAssemblyReference.cache
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\obj\Debug\CookiesWeb.dll
+D:\projects\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\obj\Debug\CookiesWeb.pdb
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\CookiesWeb.dll.config
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\CookiesWeb.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\CookiesWeb.pdb
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Antlr3.Runtime.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\EntityFramework.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\EntityFramework.SqlServer.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Google.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Newtonsoft.Json.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Owin.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Net.Http.Formatting.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Helpers.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.Owin.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.WebHost.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Mvc.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Optimization.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Razor.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.Razor.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\WebGrease.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Newtonsoft.Json.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Net.Http.Formatting.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Helpers.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.WebHost.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Mvc.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Optimization.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Razor.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.WebPages.Razor.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Antlr3.Runtime.pdb
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\EntityFramework.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\EntityFramework.SqlServer.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Google.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\bin\System.Web.Http.Owin.xml
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\obj\Debug\CookiesWeb.csprojResolveAssemblyReference.cache
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\obj\Debug\CookiesWeb.dll
+C:\Dev\CookieStore\Web\HacKSU_CookieStore\CookiesWeb\obj\Debug\CookiesWeb.pdb

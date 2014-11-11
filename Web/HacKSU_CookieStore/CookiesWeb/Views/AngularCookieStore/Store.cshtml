@@ -1,0 +1,48 @@
+﻿@*<div>
+    <div class="col-md-2 col-md-offset-1 well-lg">
+        <div class="row">
+            <input type="button" value="Cookies" class="btn btn-lg btn-info well-lg">
+        </div>
+        <div class="row">
+            &nbsp;
+        </div>
+        <div class="row">
+            <input type="button" value="Milk" class="btn btn-lg btn-info well-lg">
+        </div>
+        <div class="row">
+            &nbsp;
+        </div>
+        <div class="row">
+            <input type="button" value="Order" class="btn btn-lg btn-info well-lg">
+        </div>
+    </div>
+    <div ui-view></div>
+</div>*@
+
+<div>
+    <div class="col-md-2 col-md-offset-1 well-lg">
+        <div ng-repeat="button in buttonNames">
+            <div class="row">
+                <a ng-href="#/store/{{ button | lowercase }}">
+                <input type="button" value="{{button}}" class="btn btn-lg btn-info well-lg" />
+                </a>
+            </div>
+            <div class="row">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+    <div ui-view></div>
+</div>
+
+
+
+@section cookieStoreScripts {
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-ui-router.js"></script>
+    <script src="~/Scripts/angular-route.js"></script>
+    <script src="~/Scripts/toastr.js"></script>
+    <script src="~/apps/cookieStore/app.js"></script>
+    <script src="~/Scripts/angular-resource.js"></script>
+}
+

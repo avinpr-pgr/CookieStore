@@ -1,3 +1,4 @@
+
 package com.hacksu.CookieStore.Fragments;
 
 public class CartItem {
@@ -19,3 +20,4 @@ public class CartItem {
 	}
 	
 }
+

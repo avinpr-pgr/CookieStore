@@ -9,7 +9,6 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import com.hacksu.CookieStore.TabAdapters.TabsPagerAdapter;
 
-
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener
 {
     private ViewPager viewPager;
