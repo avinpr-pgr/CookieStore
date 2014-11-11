@@ -1,4 +1,4 @@
-﻿<div class="col-md-5 col-md-offset-2">
+﻿<!--<div class="col-md-5 col-md-offset-2">
     <ul class="list-unstyled">
         <li class="well">
             <h3 class="media-heading">Chocolate Chip Cookies</h3>
@@ -17,6 +17,16 @@
             <p>Bought from Subway just last week!</p>
             <label class="label label-default">Quantity:</label><input type="number" name="qty" value="1" class="input-sm" />
             <input type="button" class="btn btn-xs btn-info" value="Add To Cart!" />
+        </li>
+    </ul>
+</div>-->
+<div class="col-md-5 col-md-off-2">
+    <ul class="list-unstyled">
+        <li class="well" ng-repeat="product in products | filter:{Category: productCategory}">
+            <h3 class="media-heading">{{product.Name}}</h3>
+            <p>{{product.Description}}</p>
+            <label class="label label-default">Quantity:</label><input type="number" name="qty" value="0" class="input-sm" />
+            <input type="button" class="btn btn-xs btn-info" value="Add to cart!" />
         </li>
     </ul>
 </div>

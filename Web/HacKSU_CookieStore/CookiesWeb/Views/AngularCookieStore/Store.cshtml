@@ -1,4 +1,4 @@
-﻿<div ng-app="cookieStoreApp" ng-controller="cookieStoreCtrl">
+﻿@*<div>
     <div class="col-md-2 col-md-offset-1 well-lg">
         <div class="row">
             <input type="button" value="Cookies" class="btn btn-lg btn-info well-lg">
@@ -17,6 +17,22 @@
         </div>
     </div>
     <div ui-view></div>
+</div>*@
+
+<div>
+    <div class="col-md-2 col-md-offset-1 well-lg">
+        <div ng-repeat="button in buttonNames">
+            <div class="row">
+                <a ng-href="#/{{ button | lowercase }}">
+                <input type="button" value="{{button}}" class="btn btn-lg btn-info well-lg" />
+                </a>
+            </div>
+            <div class="row">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+    <div ui-view></div>
 </div>
 
 
@@ -24,7 +40,11 @@
 @section cookieStoreScripts {
     <script src="~/Scripts/angular.js"></script>
     <script src="~/Scripts/angular-ui-router.js"></script>
+    <script src="~/Scripts/angular-route.js"></script>
     <script src="~/Scripts/toastr.js"></script>
+<<<<<<< HEAD
+    <script src="~/apps/cookieStore/controllers/CookieStoreApp.js"></script>
+=======
     <script>
         var cookieStoreApp = angular.module('cookieStoreApp', ['ui.router']);
         cookieStoreApp.config([
@@ -45,5 +65,6 @@
 
         });
     </script>
+>>>>>>> origin/ChrisMorton
 }
 

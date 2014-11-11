@@ -206,6 +206,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="apps\cookieStore\app.js" />
+    <Content Include="apps\cookieStore\controllers\CookieStoreApp.js" />
+    <Content Include="apps\cookieStore\templates\HelloStore.html" />
     <Content Include="apps\cookieStore\templates\products.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -282,6 +284,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
+    <Content Include="apps\cookieStore\JSONMocks\ProductsMock.json" />
     <None Include="Properties\PublishProfiles\KSU-API.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
@@ -1042,13 +1045,15 @@
     <Content Include="Views\Home\CookieStore.cshtml" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\toastr.min.js.map" />
-    <Content Include="Views\AngularCookieStore\Store.cshtml" />
+    <Content Include="Views\AngularCookieStore\Store.cshtml">
+      <BrowseToURL>~/AngularCookieStore/Store/</BrowseToURL>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="API\" />
-    <Folder Include="apps\cookieStore\controllers\" />
     <Folder Include="apps\cookieStore\services\" />
     <Folder Include="App_Data\" />
+    <Folder Include="JSONMocks\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
