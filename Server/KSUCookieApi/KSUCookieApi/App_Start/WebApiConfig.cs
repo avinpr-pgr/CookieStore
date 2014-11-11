@@ -15,9 +15,14 @@ namespace KSUCookieApi
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
+                name: "BoolApi",
+                routeTemplate: "api/{controller}/{action}/{submit}"                
+                );
+
+            config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{action}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                routeTemplate: "api/{controller}/{action}/{ProductId}",
+                defaults: new { ProductId = RouteParameter.Optional }
             );
         }
     }

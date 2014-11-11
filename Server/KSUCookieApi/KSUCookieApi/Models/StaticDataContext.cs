@@ -21,7 +21,6 @@ namespace KSUCookieApi.Models
             }
         }
 
-        private static int orderIdToUse = 0;
         private static List<OrderModel> _orderList;
         public static List<OrderModel> OrderList
         {
@@ -33,11 +32,16 @@ namespace KSUCookieApi.Models
             }
         }
 
+        public static void ResetOrderList()
+        {
+            _orderList = null;
+        }
+
         public static ProductsModel CreateProductEntry(decimal price, Category cat, string name, string desc)
         {
             return new ProductsModel
             {
-                Id = productIdToUse++,
+                ProductId = productIdToUse++,
                 Name = name,
                 Price = price,
                 ProductCategory = cat,
@@ -67,24 +71,21 @@ namespace KSUCookieApi.Models
             return productList;
         }
 
-        public OrderModel UpdateOrder(OrderModel order)
+        public static void UpdateQuantity(OrderModel order)
         {
-            int index = _orderList.FindIndex(o => o.ProductCategory == order.ProductCategory && o.Name == order.Name);
+            int index = _orderList.FindIndex(o => o.ProductId == order.ProductId);
 
-            if (index >= 0)
-            {
-                _orderList[index].Quantity++;
-            }
-            else
-            {
-                _orderList.Add(new OrderModel { Id = orderIdToUse++, ProductCategory = order.ProductCategory, Name = order.Name, Quantity = 1 });
-            }
-            return order;
+            _orderList[index].Quantity += order.Quantity;
+        }
+
+        public static void AddItemToOrder(OrderModel order)
+        {
+            _orderList.Add(new OrderModel { ProductId = order.ProductId, Quantity = order.Quantity });
         }
 
         public void Remove(int id)
         {
-            _orderList.RemoveAll(o => o.Id == id);
+            _orderList.RemoveAll(o => o.ProductId == id);
         }
     }
 }

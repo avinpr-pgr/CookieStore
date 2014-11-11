@@ -30,9 +30,9 @@ namespace KSUCookieApi.Controllers
         }
 
         [HttpGet]
-        public ProductsModel Product(int id)
+        public ProductsModel Product(int ProductId)
         {
-            return StaticDataContext.ProductList.Where(p => p.Id == id).FirstOrDefault();
+            return StaticDataContext.ProductList.Where(p => p.ProductId == ProductId).FirstOrDefault();
         }
     }
 }

@@ -43,4 +43,3 @@ D:\projects\CookieStore\Server\KSUCookieApi\KSUCookieApi\bin\System.Web.Http.xml
 D:\projects\CookieStore\Server\KSUCookieApi\KSUCookieApi\bin\System.Web.Http.WebHost.xml
 D:\projects\CookieStore\Server\KSUCookieApi\KSUCookieApi\obj\Debug\KSUCookieApi.dll
 D:\projects\CookieStore\Server\KSUCookieApi\KSUCookieApi\obj\Debug\KSUCookieApi.pdb
-D:\projects\CookieStore\Server\KSUCookieApi\KSUCookieApi\obj\Debug\KSUCookieApi.csprojResolveAssemblyReference.cache

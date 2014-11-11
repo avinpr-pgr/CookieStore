@@ -11,31 +11,47 @@ namespace KSUCookieApi.Controllers
 {
     public class OrdersController : ApiController
     {
-        // TODO: PUT method to update order (add if no entry, update quantity if present)
-        public HttpResponseMessage Put([FromBody] OrderModel order)
+        [HttpPut]
+        public HttpResponseMessage UpdateOrder(OrderModel order)
         {
+            if (!StaticDataContext.ProductList.Any(o => o.ProductId == order.ProductId))
+                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "This is bad juju!");
+
+            bool orderExists = StaticDataContext.OrderList.Any(o => o.ProductId == order.ProductId);
+
+            if (orderExists)
+            {
+                StaticDataContext.UpdateQuantity(order);
+            }
+            else
+            {
+                StaticDataContext.AddItemToOrder(order);
+            }
+
             return Request.CreateResponse(HttpStatusCode.OK, order);
         }
 
-        // As this is not expressing returning data to the client, should this be a get?  Think about your HTTP verbs
-        //[HttpGet]
-        // If this isn't a Get, what should you return?  Remember, void is not an option.
-        //public IEnumerable<OrderList> Delete(int Id)
-        //{
-        //    // 
-        //    StaticDataContext.OrderList.RemoveAll(p => p.Id == Id);
-        //    return StaticDataContext.OrderList;
-        //}
+        [HttpDelete]
+        public HttpResponseMessage RemoveItem(int ProductId)
+        {
+            StaticDataContext.OrderList.RemoveAll(p => p.ProductId == ProductId);
+            return Request.CreateResponse(HttpStatusCode.OK, "Good job");
+        }
 
-        // TODO: Add/Update quantity
-        //[HttpGet]
-        //public IEnumerable<OrderModel> AddToCart(int Id, Category cat, int quantity)
-        //{
-        //    StaticDataContext.AddItemToCart(Id, cat, quantity);
-        //    return StaticDataContext.OrderList;
-        //}
+        [HttpPost]
+        public HttpResponseMessage Submit([FromBody]bool submit)
+        {
+            var truth = submit;
+            StaticDataContext.ResetOrderList();
+            var random = new Random();
+            int randomId = random.Next();
+            return Request.CreateResponse(HttpStatusCode.OK, "Thank you for your purchase. Your order number is " + randomId);
+        }
 
-
-        // TODO: Private method to manage static context object
+        [HttpGet]
+        public IEnumerable<OrderModel> Order()
+        {
+            return StaticDataContext.OrderList;
+        }
     }
 }

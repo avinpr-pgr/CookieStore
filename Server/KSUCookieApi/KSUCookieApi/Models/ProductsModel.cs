@@ -7,7 +7,7 @@ namespace KSUCookieApi.Models
 {
     public class ProductsModel
     {
-        public int Id { get; set; }
+        public int ProductId { get; set; }
         public Category ProductCategory { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
