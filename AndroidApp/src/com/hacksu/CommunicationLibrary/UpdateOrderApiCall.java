@@ -1,5 +1,7 @@
 package com.hacksu.CommunicationLibrary;
 
+import android.os.AsyncTask;
+import android.util.Log;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -9,24 +11,19 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
-import android.os.AsyncTask;
-import android.util.Log;
-
 /**
- * Created by dpendle on 11/11/2014.
+ * Created by owner on 11/14/2014.
  */
-public class ApiCalls extends AsyncTask<Void, Void, JSONObject> {
+public class UpdateOrderApiCall extends AsyncTask<Void, Void, JSONObject> {
     private String urlname;
     private JSONObject jsonObjSend;
     private final String TAG = "HttpClient";
     private JSONObject result = null;
 
-    public ApiCalls(String URL, JSONObject jsonObjSend) {
+    public UpdateOrderApiCall(String URL, JSONObject jsonObjSend) {
         this.urlname = URL;
         this.jsonObjSend = jsonObjSend;
     }
-
-    private Exception exception;
 
     @Override
     protected JSONObject doInBackground(Void... params) {
@@ -55,7 +52,6 @@ public class ApiCalls extends AsyncTask<Void, Void, JSONObject> {
         }
         return null;
     }
-
 }
 
 

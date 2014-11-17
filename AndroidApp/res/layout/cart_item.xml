@@ -15,8 +15,15 @@
         android:id="@+id/cart_item_quantity"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:text="CartItemQty">
+    </TextView>
+    <TextView
+            android:id="@+id/cart_item_price"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.5"
+            android:text="CartItemPrice">
     </TextView>
     
     <Button 
@@ -25,4 +32,5 @@
         android:layout_height="40dp"
         android:layout_weight="0.5"
         android:text="X"/>
-</LinearLayout>
+
+</LinearLayout>

@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import com.hacksu.CommunicationLibrary.ApiCalls;
+import com.hacksu.CommunicationLibrary.UpdateOrderApiCall;
 import com.hacksu.CookieStore.FragmentHelper;
 import com.hacksu.CookieStore.R;
 import org.json.JSONException;
@@ -28,6 +28,7 @@ public class DetailsFragment extends Fragment
     private Bundle args;
     TextView nameTextView;
     TextView descriptionTextView;
+    TextView priceTextView;
     EditText quantityText;
     Button addButton;
     private int textBoxValue;
@@ -60,12 +61,14 @@ public class DetailsFragment extends Fragment
     {
         nameTextView= (TextView) rootView.findViewById(R.id.name);
         descriptionTextView= (TextView) rootView.findViewById(R.id.description);
+        priceTextView= (TextView) rootView.findViewById(R.id.price);
         iD = Integer.parseInt(args.getString("id"));
     }
     private void setTextViewDisplay()
     {
         nameTextView.setText(args.getString("name"));
         descriptionTextView.setText(args.getString("description"));
+        priceTextView.setText(args.getString("price"));
     }
     private void linkTextBoxViewToVariables()
     {
@@ -126,7 +129,7 @@ public class DetailsFragment extends Fragment
            URL url = new URL("http://cookieapidev1.cloudapp.net/ksuapi/api/orders/UpdateOrder");
             textBoxValue = Integer.parseInt(quantityText.getText().toString());
             jsonAddToCart = writeJSON(textBoxValue);
-           ApiCalls client = new ApiCalls(url.toString(), jsonAddToCart);
+           UpdateOrderApiCall client = new UpdateOrderApiCall(url.toString(), jsonAddToCart);
            client.execute();
         }
         public JSONObject writeJSON(int textBoxValue) {

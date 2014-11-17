@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import com.hacksu.CommunicationLibrary.AllProductsApiCall;
 import com.hacksu.CookieStore.FragmentHelper;
 import com.hacksu.CookieStore.R;
 import org.json.JSONArray;
@@ -16,6 +17,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.*;
+import java.util.concurrent.ExecutionException;
 
 public class HomeFragment extends ListFragment
 {
@@ -64,9 +66,10 @@ public class HomeFragment extends ListFragment
                 Map<String, String> map = productList.get(position);
                 Bundle bundle = new Bundle();
                 if (map.containsKey("NotAProduct")) return;
-                bundle.putString("id", map.get("Id"));
+                bundle.putString("id", map.get("ProductId"));
                 bundle.putString("name", map.get("Name"));
                 bundle.putString("description", map.get("Description"));
+                bundle.putString("price", map.get("Price"));
 
                 DetailsFragment fragment = new DetailsFragment();
                 fragment.setArguments(bundle);
@@ -82,7 +85,7 @@ public class HomeFragment extends ListFragment
         ArrayList<String> addedCategories = new ArrayList<String>();
         for (Map<String, String> map : processedData)
         {
-            String category = map.get("Category");
+            String category = map.get("ProductCategory");
             if (!addedCategories.contains(category))
             {
                 viewableList.add(categories.get(category));
@@ -127,16 +130,20 @@ public class HomeFragment extends ListFragment
     private JSONArray getData()
     {
         JSONArray data = null;
+
+        String urlString = "http://cookieapidev1.cloudapp.net/ksuapi/api/products/AllProducts";
+        AllProductsApiCall client = new AllProductsApiCall(urlString);
+        client.execute();
         try
         {
-            data = new JSONArray(tempData);
-        }
-        catch (JSONException e)
-        {
+            data = new JSONArray(client.get());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
             e.printStackTrace();
         }
         return data;
     }
-
-    private String tempData = "[{\"Category\":0,\"Id\":0,\"Name\":\"Chocolate Chip\",\"Description\":\"Warm, gooey Chocolate Chips!\",\"Price\":1.0},{\"Category\":0,\"Id\":1,\"Name\":\"Peanut Butter\",\"Description\":\"Caution--May Contain Peanut Products\",\"Price\":1.25},{\"Category\":0,\"Id\":2,\"Name\":\"Sugar\",\"Description\":\"WHEEE!!\",\"Price\":1.5},{\"Category\":0,\"Id\":3,\"Name\":\"Oatmeal Raisin\",\"Description\":\"It's Oatmeal. It's Raisin. It's both!\",\"Price\":2.25},{\"Category\":1,\"Id\":4,\"Name\":\"Whole\",\"Description\":\"Pours like a milkshake\",\"Price\":0.5},{\"Category\":1,\"Id\":5,\"Name\":\"2%\",\"Description\":\"Just Like Mom used to buy\",\"Price\":0.75},{\"Category\":1,\"Id\":6,\"Name\":\"Skim\",\"Description\":\"To help you watch your waistline\",\"Price\":0.55},{\"Category\":1,\"Id\":7,\"Name\":\"Soy\",\"Description\":\"Well... this is really soy juice but who cares?\",\"Price\":1.3}]";
 }

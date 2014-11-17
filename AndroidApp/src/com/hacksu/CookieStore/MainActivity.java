@@ -14,8 +14,9 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     private ViewPager viewPager;
     private TabsPagerAdapter mAdapter;
     private ActionBar actionBar;
+    public static String submitInfo;
     // Tab titles
-    private String[] tabs = { "Home", "Cart", "About" };
+    private String[] tabs = { "Home", "Cart", "Confirm" };
 
     @Override
     public void onCreate(Bundle savedInstanceState)
