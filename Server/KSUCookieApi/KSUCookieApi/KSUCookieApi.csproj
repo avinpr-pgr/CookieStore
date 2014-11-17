@@ -140,6 +140,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DetailedOrderModel.cs" />
     <Compile Include="Models\OrderModel.cs" />
     <Compile Include="Models\ProductsModel.cs" />
     <Compile Include="Models\StaticDataContext.cs" />
