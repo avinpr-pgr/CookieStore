@@ -53,5 +53,19 @@ namespace KSUCookieApi.Controllers
         {
             return StaticDataContext.OrderList;
         }
+
+        [HttpGet]
+        public IEnumerable<DetailedOrderModel> DetailedOrder()
+        {
+            return (from order in StaticDataContext.OrderList
+                    join product in StaticDataContext.ProductList on order.ProductId equals product.ProductId
+                    select new DetailedOrderModel
+                    {
+                        ProductId = order.ProductId,
+                        Quantity = order.Quantity,
+                        Name = product.Name,
+                        Description = product.Description
+                    });
+        }
     }
 }

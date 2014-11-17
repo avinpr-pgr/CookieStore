@@ -1,64 +1,38 @@
-﻿function Product(id, category, name, description, price) {
-    this.id = id;
+﻿function Product(productId, category, name, description, price) {
+    this.productId = productId;
     this.category = category;
     this.name = name;
     this.description = description;
     this.price = price;
 }
 
-function OrderInfo(id, quantity) {
-    this.id = id;
+function OrderInfo(productId, quantity) {
+    this.productId = productId;
     this.quantity = quantity;
 }
-
-var chocoChip = new Product(0, 0, "Chocolate Chip", "Warm, gooey Chocolate Chips!", 1);
-var peanutButter = new Product(1, 0, "Peanut Butter", "Caution--May Contain Peanut Products", 1.25);
-var sugar = new Product(2, 0, "Sugar", "WHEEE!!", 1.5);
-var oatRaisin = new Product(3, 0, "Oatmeal Raisin", "It's Oatmeal. It's Raisin. It's both!", 2.25);
-var whole = new Product(4, 1, "Whole", "Pours like a milkshake", 0.5);
-var twoPer = new Product(5, 1, "2%", "Just Like Mom used to buy", 0.75);
-var skim = new Product(6, 1, "Skim", "To help you watch your waistline", 0.55);
-var soy = new Product(7, 1, "Soy", "Well...this is really soy juice, but who cares?", 1.3);
-
-var productsArray = [chocoChip, peanutButter, sugar, oatRaisin, whole, twoPer, skim, soy];
-
-function makeItemArray(products, category) {
-    var itemArray = [];
-    products.forEach(function (currentProduct) {
-        var itemCategory = currentProduct.category;
-        if (itemCategory == category) {
-            itemArray.push(currentProduct);
-        }
-    });
-
-    return itemArray;
-}
-
-var cookieItems = makeItemArray(productsArray, 0);
-var milkItems = makeItemArray(productsArray, 1);
 
 var cookieStoreApp = angular.module('cookieStoreApp', ['ui.router', 'ngResource']);
 cookieStoreApp.config([
     '$stateProvider',
     '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/store');
+        $urlRouterProvider.otherwise('/Home');
 
-        $stateProvider.state('store', {
-            url: '/store',
+        $stateProvider.state('Home', {
+            url: '/Home',
             templateUrl: '/apps/cookieStore/templates/products.html',
             controller: 'allProductsController'
         });
 
         $stateProvider.state('cookies', {
             url: '/store/cookies',
-            templateUrl: '/apps/cookieStore/templates/cookies.html',
+            templateUrl: '/apps/cookieStore/templates/products.html',
             controller: 'cookieController'
         });
 
         $stateProvider.state('milk', {
             url: '/store/milk',
-            templateUrl: '/apps/cookieStore/templates/milk.html',
+            templateUrl: '/apps/cookieStore/templates/products.html',
             controller: 'milkController'
         })
 
@@ -79,48 +53,112 @@ cookieStoreApp.controller('buttonsController', [
 
 cookieStoreApp.controller('allProductsController', [
     '$scope',
-    'shoppingCartService',
-    function ($scope, shoppingCartService) {
-        $scope.allProducts = productsArray;
+    'talkyTalkyService',
+    function ($scope, talkyTalkyService) {
+        $scope.btnDescription = "Add Item To Cart!";
+        $scope.allProducts = talkyTalkyService.getAllProducts();
+
+        $scope.buttonAction = function ($index, qty) {
+            talkyTalkyService.updateOrder({
+                productid: $scope.allProducts[$index].ProductId,
+                quantity: qty
+            })
+        }
     }
 ]);
 
 cookieStoreApp.controller('cookieController', [
     '$scope',
-    'shoppingCartService',
-    function ($scope) {
-        $scope.allProducts = cookieItems;
+    'talkyTalkyService',
+    function ($scope, talkyTalkyService) {
+        $scope.btnDescription = "Add Cookie To Cart!";
+        $scope.allProducts = talkyTalkyService.getAllCookies();
+
+        $scope.buttonAction = function ($index, qty) {
+            talkyTalkyService.updateOrder({
+                productid: $scope.allProducts[$index].ProductId,
+                quantity: qty
+            })
+        }
     }
 ]);
 
 cookieStoreApp.controller('milkController', [
     '$scope',
-    'shoppingCartService',
-    function ($scope) {
-        $scope.allProducts = milkItems;
+    'talkyTalkyService',
+    function ($scope, talkyTalkyService) {
+        $scope.btnDescription = "Add Milk To Cart!";
+        $scope.allProducts = talkyTalkyService.getAllMilk();
+        $scope.buttonAction = function ($index, qty) {
+            talkyTalkyService.updateOrder({
+                productid: $scope.allProducts[$index].ProductId,
+                quantity: qty
+            })
+        }
     }
 ]);
 
 cookieStoreApp.controller('orderController', [
     '$scope',
-    'shoppingCartService',
-    function ($scope, shoppingCartService) {
-        $scope.shoppingCart = shoppingCartService.getCart;
+    'talkyTalkyService',
+    function ($scope, talkyTalkyService) {
+        $scope.btnDescription = "Remove Item From Cart!";
+        $scope.allProducts = talkyTalkyService.getOrder();
+        $scope.buttonAction = function ($index, qty) {
+            talkyTalkyService.removeItem($scope.allProducts[$index].ProductId)
+            $scope.allProducts.splice($index, 1);
+        }
     }
 ])
 
-cookieStoreApp.service('shoppingCartService', function () {
-    this.shoppingCart = [];
+cookieStoreApp.service('talkyTalkyService', function ($resource, $http) {
+    return {
+        allProductsArray: [],
+        allCookiesArray: [],
+        allMilkArray: [],
+        order: [],
 
-    this.addItem = function (item) {
-        this.shoppingCart.push(item);
-    }
+        getAllProducts: function () {
+            if (this.allProductsArray.length === 0) {
+                this.allProductsArray = $resource('http://cookieapidev1.cloudapp.net/ksuapi/api/products/AllProducts').query();
+            }
+            return this.allProductsArray;
+        },
+        getAllCookies: function () {
+            if (this.allCookiesArray.length === 0) {
+                this.allCookiesArray = $resource('http://cookieapidev1.cloudapp.net/ksuapi/api/products/Cookies').query();
+            }
+            return this.allCookiesArray;
+        },
+        getAllMilk: function () {
+            if (this.allMilkArray.length === 0) {
+                this.allMilkArray = $resource('http://cookieapidev1.cloudapp.net/ksuapi/api/products/Milk').query();
+            }
+            return this.allMilkArray;
+        },
+        getOrder: function () {
+            this.order = []
+            stufftocheck = $resource('http://cookieapidev1.cloudapp.net/ksuapi/api/orders/order').query();
+            // array.prototype.merge() or array.prototype.map on MDN will help you here
 
-    this.getCart = function () {
-        return this.shoppingCart;
-    }
-
-    this.clear = function () {
-        this.shoppingCart = [];
+            return this.order;
+        },
+        updateOrder: function (orderInfo) {
+            $http({
+                url: 'http://cookieapidev1.cloudapp.net/ksuapi/api/orders/UpdateOrder',
+                method: 'PUT',
+                data: orderInfo
+            });
+        },
+        removeItem: function (productId) {
+            $http({
+                url: 'http://cookieapidev1.cloudapp.net/ksuapi/api/orders/RemoveItem/' + productId,
+                method: 'DELETE'
+            });
+        },
+        submitOrder: function () {
+            var resource = $resource('http://cookiesapidev1.cloudapp.net/ksuapi/api/orders/submit');
+            resource.save();
+        }
     }
 })

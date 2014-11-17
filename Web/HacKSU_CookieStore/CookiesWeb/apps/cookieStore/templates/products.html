@@ -1,10 +1,11 @@
-﻿<div class="col-md-5 col-md-off-2" ng-controller="allProductsController">
+﻿<div class="col-md-5 col-md-off-2">
     <ul class="list-unstyled">
         <li class="well" ng-repeat="product in allProducts">
-            <h3 class="media-heading">{{product.name}}</h3>
-            <p>{{product.description}}</p>
-            <label class="label label-default">Quantity:</label><input type="number" name="qty" value="0" class="input-sm" />
-            <input type="button" ng-click="addItem($index)" class="btn btn-xs btn-info" value="Add to cart!" />
+            <h3 class="media-heading">{{product.Name}}</h3>
+            <p>{{product.Description}}</p>
+            <p>{{product.Price | currency}}</p>
+            <label class="label label-default">Quantity:</label><input type="number" name="qty" ng-model="qty" class="input-sm"/>
+            <input type="button" ng-click="buttonAction($index, qty)" class="btn btn-xs btn-info" value={{btnDescription}} />
         </li>
     </ul>
 </div>
