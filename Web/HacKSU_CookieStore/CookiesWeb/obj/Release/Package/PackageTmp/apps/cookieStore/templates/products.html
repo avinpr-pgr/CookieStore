@@ -1,22 +1,11 @@
-﻿<div class="col-md-5 col-md-offset-2">
+﻿<div class="col-md-5 col-md-off-2">
     <ul class="list-unstyled">
-        <li class="well">
-            <h3 class="media-heading">Chocolate Chip Cookies</h3>
-            <p>Soft-baked cookies with milk chocolate chips!</p>
-            <label class="label label-default">Quantity:</label><input type="number" name="qty" value="1" class="input-sm" />
-            <input type="button" class="btn btn-xs btn-info" value="Add To Cart!" />
-        </li>
-        <li class="well">
-            <h3 class="media-heading">Peanut Butter Cookies</h3>
-            <p>Chewy peanut butter batter baked to prefection!</p>
-            <label class="label label-default">Quantity:</label><input type="number" name="qty" value="1" class="input-sm" />
-            <input type="button" class="btn btn-xs btn-info" value="Add To Cart!" />
-        </li>
-        <li class="well">
-            <h3 class="media-heading">M&M Chocolate Chip</h3>
-            <p>Bought from Subway just last week!</p>
-            <label class="label label-default">Quantity:</label><input type="number" name="qty" value="1" class="input-sm" />
-            <input type="button" class="btn btn-xs btn-info" value="Add To Cart!" />
+        <li class="well" ng-repeat="product in allProducts">
+            <h3 class="media-heading">{{product.Name}}</h3>
+            <p>{{product.Description}}</p>
+            <p>{{product.Price | currency}}</p>
+            <label class="label label-default">Quantity:</label><input type="number" name="qty" ng-model="qty" class="input-sm"/>
+            <input type="button" ng-click="buttonAction($index, qty)" class="btn btn-xs btn-info" value={{btnDescription}} />
         </li>
     </ul>
 </div>

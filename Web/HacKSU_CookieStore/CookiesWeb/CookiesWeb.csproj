@@ -206,7 +206,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="apps\cookieStore\app.js" />
-    <Content Include="apps\cookieStore\controllers\CookieStoreApp.js" />
+    <Content Include="apps\cookieStore\controllers\allProductsController.js" />
+    <Content Include="apps\cookieStore\controllers\buttonsController.js" />
+    <Content Include="apps\cookieStore\controllers\cookieController.js" />
+    <Content Include="apps\cookieStore\services\talkyTalkyService.js" />
+    <Content Include="apps\cookieStore\controllers\milkController.js" />
+    <Content Include="apps\cookieStore\controllers\orderController.js" />
     <Content Include="apps\cookieStore\templates\order.html" />
     <Content Include="apps\cookieStore\templates\products.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -282,11 +287,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="apps\cookieStore\AllProducts.json" />
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
-    <Content Include="apps\cookieStore\AllProducts.json" />
     <None Include="Properties\PublishProfiles\KSU-API.pubxml" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-et.js" />
@@ -1015,8 +1019,11 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Properties\PublishProfiles\KSU-Site.pubxml" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -1041,18 +1048,14 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\CookieStore.cshtml" />
     <Content Include="Scripts\version.json" />
-    <Content Include="Scripts\toastr.min.js.map" />
     <Content Include="Views\AngularCookieStore\Store.cshtml">
       <BrowseToURL>~/AngularCookieStore/Store/</BrowseToURL>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="API\" />
-    <Folder Include="apps\cookieStore\JSONMocks\" />
-    <Folder Include="apps\cookieStore\services\" />
     <Folder Include="App_Data\" />
     <Folder Include="JSONMocks\" />
     <Folder Include="Models\" />
