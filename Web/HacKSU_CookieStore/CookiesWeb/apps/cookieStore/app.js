@@ -3,33 +3,30 @@ cookieStoreApp.config([
     '$stateProvider',
     '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/store');
+        $urlRouterProvider.otherwise('/Home');
 
-        $stateProvider.state('store', {
-            url: '/store',
-            templateUrl: '/apps/cookieStore/templates/store.html',
-            controller: 'cookieStoreController'
+        $stateProvider.state('Home', {
+            url: '/Home',
+            templateUrl: '/ksusite/apps/cookieStore/templates/products.html',
+            controller: 'allProductsController'
         });
 
-        $stateProvider.state('products', {
-            url: '/store/:product',
-            templateUrl: '/apps/cookieStore/templates/products.html',
-            controller: 'cookieStoreController'
+        $stateProvider.state('cookies', {
+            url: '/store/cookies',
+            templateUrl: '/ksusite/apps/cookieStore/templates/products.html',
+            controller: 'cookieController'
         });
+
+        $stateProvider.state('milk', {
+            url: '/store/milk',
+            templateUrl: '/ksusite/apps/cookieStore/templates/products.html',
+            controller: 'milkController'
+        })
 
         $stateProvider.state('order', {
             url: '/store/order',
-            templateUrl: '/apps/cookieStore/templates/order.html',
-            controller: 'cookieStoreController'
+            templateUrl: '/ksusite/apps/cookieStore/templates/order.html',
+            controller: 'orderController'
         })
     }
 ]);
-cookieStoreApp.controller('cookieStoreController', [
-    '$scope',
-    '$resource',
-    function ($scope, $resource) {
-    $scope.buttonNames = ["Home", "Cookies", "Milk", "Order"];
-
-    allProducts = $resource('http://cookieapidev1.cloudapp.net/ksuapi/api/products/allproducts');
-    $scope.products = allProducts.query();
-}]);

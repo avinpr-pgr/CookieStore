@@ -13,22 +13,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/11/2014 15:46:48</publishTime>
     </File>
     <File Include="bin/KSUCookieApi.dll">
-      <publishTime>11/14/2014 11:37:08</publishTime>
+      <publishTime>11/17/2014 10:25:57</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>11/11/2014 15:46:49</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>11/11/2014 15:46:49</publishTime>
+      <publishTime>11/17/2014 10:22:07</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
-      <publishTime>11/11/2014 15:46:49</publishTime>
+      <publishTime>11/17/2014 10:22:07</publishTime>
+    </File>
+    <File Include="bin/System.Web.Cors.dll">
+      <publishTime>11/17/2014 10:22:07</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>11/11/2014 15:46:49</publishTime>
     </File>
+    <File Include="bin/System.Web.Http.Cors.dll">
+      <publishTime>11/17/2014 10:22:07</publishTime>
+    </File>
     <File Include="bin/System.Web.Http.dll">
-      <publishTime>11/11/2014 15:46:49</publishTime>
+      <publishTime>11/17/2014 10:22:07</publishTime>
     </File>
     <File Include="bin/System.Web.Http.WebHost.dll">
       <publishTime>11/11/2014 15:46:49</publishTime>
@@ -79,7 +85,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/11/2014 15:46:48</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>11/11/2014 15:46:48</publishTime>
+      <publishTime>11/17/2014 10:22:11</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>11/11/2014 15:46:48</publishTime>
@@ -124,7 +130,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/11/2014 15:46:48</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/11/2014 15:46:48</publishTime>
+      <publishTime>11/17/2014 10:25:57</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -1,0 +1,58 @@
+﻿[
+    {
+        "ProductId": 0,
+        "ProductCategory": 0,
+        "Name": "Chocolate Chip",
+        "Description": "Warm, gooey Chocolate Chips!",
+        "Price": 1
+    },
+    {
+        "ProductId": 1,
+        "ProductCategory": 0,
+        "Name": "Peanut Butter",
+        "Description": "Caution--May Contain Peanut Products",
+        "Price": 1.25
+    },
+    {
+        "ProductId": 2,
+        "ProductCategory": 0,
+        "Name": "Sugar",
+        "Description": "WHEEE!!",
+        "Price": 1.5
+    },
+    {
+        "ProductId": 3,
+        "ProductCategory": 0,
+        "Name": "Oatmeal Raisin",
+        "Description": "It's Oatmeal.  It's Raisin.  It's both!",
+        "Price": 2.25
+    },
+    {
+        "ProductId": 4,
+        "ProductCategory": 1,
+        "Name": "Whole",
+        "Description": "Pours like a milkshake",
+        "Price": 0.5
+    },
+    {
+        "ProductId": 5,
+        "ProductCategory": 1,
+        "Name": "2%",
+        "Description": "Just Like Mom used to buy",
+        "Price": 0.75
+    },
+    {
+        "ProductId": 6,
+        "ProductCategory": 1,
+        "Name": "Skim",
+        "Description": "To help you watch your waistline",
+        "Price": 0.55
+    },
+    {
+        "ProductId": 7,
+        "ProductCategory": 1,
+        "Name": "Soy",
+        "Description": "Well... this is really soy juice but who cares?",
+        "Price": 1.3
+    }
+]

@@ -1,0 +1,21 @@
+﻿<div class="col-md-5 col-md-off-2">
+    <ul class="list-unstyled">
+        <li class="well" ng-repeat="product in allProducts">
+            <section>
+                <h3 class="media-heading">{{product.Name}}</h3>
+                <p>{{product.Description}}</p>
+                <p>{{product.Price | currency}}</p>
+                <label class="label label-default">Quantity:</label><input type="number" value="{{product.Quantity}}" class="input-sm" disabled />
+            </section>
+            <input type="button" ng-click="buttonAction($index, qty)" class="btn btn-xs btn-info" value={{btnDescription}} />
+        </li>
+    </ul>
+    <input type="button" ng-click="submitOrder()" class="btn btn-lg btn-success" value="Submit Order" ng-hide="allProducts.length === 0" />
+    <div ng-show="allProducts.length === 0">
+        <ul class="list-unstyled">
+            <li class="well">
+                <p>Your cart is currently empty.</p>
+            </li>
+        </ul>
+    </div>
+</div>

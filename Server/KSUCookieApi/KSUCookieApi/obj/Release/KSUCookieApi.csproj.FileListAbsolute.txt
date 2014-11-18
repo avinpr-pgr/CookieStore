@@ -30,3 +30,6 @@ D:\projects\CookieStore\Server\KSUCookieApi\KSUCookieApi\bin\System.Web.Http.Web
 D:\projects\CookieStore\Server\KSUCookieApi\KSUCookieApi\obj\Release\KSUCookieApi.csprojResolveAssemblyReference.cache
 D:\projects\CookieStore\Server\KSUCookieApi\KSUCookieApi\obj\Release\KSUCookieApi.dll
 D:\projects\CookieStore\Server\KSUCookieApi\KSUCookieApi\obj\Release\KSUCookieApi.pdb
+D:\projects\CookieStore\Server\KSUCookieApi\KSUCookieApi\bin\System.Web.Cors.dll
+D:\projects\CookieStore\Server\KSUCookieApi\KSUCookieApi\bin\System.Web.Http.Cors.dll
+D:\projects\CookieStore\Server\KSUCookieApi\KSUCookieApi\bin\System.Web.Http.Cors.xml
